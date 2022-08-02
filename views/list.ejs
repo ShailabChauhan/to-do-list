@@ -1,0 +1,36 @@
+<%- include("header") -%>
+
+    <div class = "box" id = "heading">
+        <h1> <%=kindOfDay%></h1>
+    </div>
+
+
+<!-- <%if(kindOfDay == "Sunday" || kindOfDay == "Saturday"){%>
+        <h1 style="color: red;">Today is <%=kindOfDay %></h1>
+   <% }else{ %>
+        <h1>Today is <%=kindOfDay%></h1>
+    <%}%>
+    
+    <p>So I have to work</p> -->
+
+   <div class="box">
+
+        <!-- <li>Buy Food</li>
+        <li>Cook Food</li>
+        <li>Eat Food</li> -->
+        <!-- <li><%= newListItem %></li> -->
+
+       <% for(var i =0; i< newListItem.length; i++){ %>
+        <div class = "item">
+            <input type = "checkbox">    
+            <p> <%= newListItem[i] %></p>
+        </div>
+        <%  } %>
+
+    <form class ="" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type = "submit" name="list" value = <%= kindOfDay %>>+</button>
+    </form>
+   </div>
+
+   <%- include("footer") -%>
